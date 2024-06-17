@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+// import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Menu from '@/components/Menu';
 import Reservation from '@/components/Reservation';
@@ -7,11 +7,19 @@ import Map from '@/components/Map';
 import StyleGuide from '@/components/StyleGuide';
 import Footer from '../components/Footer';
 
+import dynamic from 'next/dynamic';
+
+const DynamicHeader = dynamic(() => import("@/components/Header"), 
+ {
+  ssr: false,
+  loading: () => <p>Cargando...</p>
+ })
+
 export default function Home() {
   return (
     <main className='w-full max-w-[1440px] bg-white mx-auto overflow-hidden'>
       {/* <StyleGuide /> */}
-      <Header/>
+     <DynamicHeader/>
       <Hero/>
       <Menu/>
       <Reservation/>
