@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect } from "react";
 
@@ -13,20 +13,22 @@ import { Button } from "./ui/button";
 const Header = () => {
   const [active, setActive] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      //Detector de Scroll
-      setActive(window.scrollY > 100);
-    };
+  if (typeof window === "undefined") {
+    useEffect(() => {
+      const handleScroll = () => {
+        //Detector de Scroll
+        setActive(window.scrollY > 100);
+      };
 
-    //Add event listener
-    window.addEventListener("scroll", handleScroll);
+      //Add event listener
+      window.addEventListener("scroll", handleScroll);
 
-    //Limpiar evento listener
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      //Limpiar evento listener
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+  }
 
   //console.log(active)
   //Aca vemos cuando cambia el valor boleano de active al detectar el valor de scrool.y
