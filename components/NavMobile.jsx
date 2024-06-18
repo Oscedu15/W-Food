@@ -1,3 +1,5 @@
+'use client';
+
 import React, {useState} from 'react';
 import {RiMenu2Line, RiHomeFill} from 'react-icons/ri';
 import {IoCloseOutline} from 'react-icons/io5';
