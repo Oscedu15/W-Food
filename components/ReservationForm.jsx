@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import * as React from "react";
 import { useState } from "react";
@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 import { Calendar } from "./ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
-import Link from "next/link";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
@@ -25,7 +24,8 @@ import {
 } from "./ui/select";
 
 const ReservationForm = () => {
-  const [date, setDate] = useState();
+  const [date, setDate] = useState(); // Inicializa el estado de la fecha
+
   return (
     <form className="flex flex-col gap-y-10">
       <div className="grid gap-[30px]">
@@ -40,7 +40,7 @@ const ReservationForm = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-[30px]">
-          {/* calendario */}
+          {/* Calendario */}
           <div>
             <Label>Fecha</Label>
             <Popover>
@@ -63,7 +63,7 @@ const ReservationForm = () => {
               </PopoverContent>
             </Popover>
           </div>
-          {/* Seleccion */}
+          {/* Selección de personas */}
           <div>
             <Label>Personas</Label>
             <Select>
@@ -84,7 +84,9 @@ const ReservationForm = () => {
           </div>
         </div>
       </div>
-      <Button className='uppercase w-full xl:w-auto xl:self-end'>Reservar</Button>
+      <Button className="uppercase w-full xl:w-auto xl:self-end">
+        Reservar
+      </Button>
     </form>
   );
 };

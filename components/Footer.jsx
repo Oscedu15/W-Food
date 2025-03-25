@@ -1,20 +1,25 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { fadeIn } from "@/variants";
+import { fadeIn } from "@/variants"; // Asegúrate de que esta función esté definida correctamente
 import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <motion.footer variants={fadeIn('up', 0.2)} initial='hidden' whileInView={'show'} viewport={{once: false, amount:0.2}}
-    className="bg-footer bg-cover bg-no-repeat text-white pt-16">
+    <motion.footer 
+      variants={fadeIn('up', 0.2)} 
+      initial='hidden' 
+      whileInView={'show'} 
+      viewport={{ once: false, amount: 0.2 }}
+      className="bg-footer bg-cover bg-no-repeat text-white pt-16"
+    >
       <div className="container mx-auto">
         <div className="flex flex-col justify-between xl:flex-row">
           {/* Logo */}
           <div className="w-[300px] mb-8 xl:mb-0">
             <Link href="/">
-              <Image src="/logo.svg" width={90} height={36} alt="" />
+              <Image src="/logo.svg" width={90} height={36} alt="Logo de W-Food" />
             </Link>
           </div>
           {/* grid items */}
@@ -75,8 +80,8 @@ const Footer = () => {
             </div>
             {/* Socials */}
             <div>
-            <h4 className="font-semibold mb-5">Redes Sociales</h4>
-            <ul className="flex flex-col gap-y-6 text-sm">
+              <h4 className="font-semibold mb-5">Redes Sociales</h4>
+              <ul className="flex flex-col gap-y-6 text-sm">
                 <li>
                   <Link href="/">
                     Instagram
@@ -98,11 +103,13 @@ const Footer = () => {
         </div>
         {/* Copyright  */}
         <div className="py-4 border-t border-white/10">
-            <p className="text-white/60 text-center text-sm">Todos los derechos reservados &copy; W-Food 2024 || Realizado por <span className="text-orange font-semibold">Oscar Garcia</span></p>
+          <p className="text-white/60 text-center text-sm">
+            Todos los derechos reservados &copy; W-Food 2024 || Realizado por <span className="text-orange font-semibold">Oscar Garcia</span>
+          </p>
         </div>
       </div>
     </motion.footer>
   );
 };
 
-export default Footer;
+export default Footer

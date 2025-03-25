@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/variants";
+import { fadeIn } from "@/variants"; 
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -62,7 +62,7 @@ const Hero = () => {
             viewport={{ once: false, amount: 0.1 }}
             className="hidden xl:flex xl:absolute xl:top-[200px] xl:right-0"
           >
-            <Image src="/hero/plate.png" width={756} height={682} alt="" />
+            <Image src="/hero/plate.png" width={756} height={682} alt="Plato" />
           </motion.div>
         </div>
       </div>
