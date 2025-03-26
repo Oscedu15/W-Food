@@ -4,9 +4,9 @@ import Hero from "@/components/Hero";
 import Menu from "@/components/Menu";
 import Reservation from "@/components/Reservation";
 import About from "@/components/About";
-// import Map from "@/components/Map";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import MapContainer from "@/components/MapContainer";
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
       <Header />
       <Hero />
       <Menu />
-      <Reservation />
       <About />
-      {/* <Map /> */}
+      <Reservation />
+      <MapContainer />
       <Footer />
     </main>
   );
