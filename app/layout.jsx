@@ -14,14 +14,14 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://w-food-two.vercel.app/"),
+  metadataBase: new URL("https://w-food-two.vercel.app"),
   title: "W'Food Restaurant",
   openGraph: {
     description: "Una Muestra de Sabores Locales.",
-    url: "https://w-food-two.vercel.app/",
+    url: "https://w-food-two.vercel.app",
     images: [
       {
-        url: "/bg.png", // Ruta relativa a la imagen en la carpeta public
+        url: "/img.png", // Ruta relativa a la imagen en la carpeta public
         width: 1200, // Ancho de la imagen
         height: 630, // Alto de la imagen
         alt: "W-Food", // Texto alternativo para la imagen
