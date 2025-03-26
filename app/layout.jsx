@@ -21,7 +21,7 @@ export const metadata = {
     url: "https://w-food-two.vercel.app/",
     images: [
       {
-        url: "/w-food.png", // Ruta relativa a la imagen en la carpeta public
+        url: "/bg.png", // Ruta relativa a la imagen en la carpeta public
         width: 1200, // Ancho de la imagen
         height: 630, // Alto de la imagen
         alt: "W-Food", // Texto alternativo para la imagen
